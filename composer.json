@@ -2,14 +2,14 @@
     "name": "gafit/laravel-web-tinker",
     "description": "Artisan Tinker in your browser",
     "keywords": [
-        "spatie",
+        "gafit",
         "web-tinker",
         "laravel",
         "tinker",
         "debug",
         "development"
     ],
-    "homepage": "https://github.com/spatie/laravel-web-tinker",
+    "homepage": "https://github.com/gafit/laravel-web-tinker",
     "license": "MIT",
     "authors": [
         {
