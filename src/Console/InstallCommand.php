@@ -22,7 +22,12 @@ class InstallCommand extends Command
     {
         $this->comment('Publishing Web Tinker Assets...');
 
-        $this->callSilent('vendor:publish', ['--tag' => 'web-tinker-assets', ($this->option('force') ? ' --force' : '')]);
+        $publishOptions = ['--tag' => 'web-tinker-assets'];
+        if($this->option('force')){
+            $this->comment('Forcing...');
+            $publishOptions['--force'] = true;
+        }
+        $this->callSilent('vendor:publish', $publishOptions);
 
         $this->info('Web tinker installed successfully.');
     }
