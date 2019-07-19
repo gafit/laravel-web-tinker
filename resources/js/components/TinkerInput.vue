@@ -57,8 +57,13 @@ export default {
                 return;
             }
 
+            this.$emit('execute', document.getElementById('loading_gif_container').innerHTML.trim());
+
             axios.post(window.location, { code }).then(({ data }) => {
                 this.$emit('execute', data);
+            }).catch((error) => {
+                this.$emit('execute', '<error>Error making request. More details logged on console.</error>');
+                console.log(error);
             });
         },
     },

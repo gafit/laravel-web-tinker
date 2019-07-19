@@ -16,4 +16,10 @@
         @apply bg-error;
         @apply whitespace-normal;
     }
+
+    & .loading {
+        @apply block;
+        @apply px-2;
+        width: 40px;
+    }
 }

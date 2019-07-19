@@ -8,9 +8,9 @@ return [
     'path' => '/tinker',
 
     /*
-     * Possible values are 'auto', 'light' and 'dark'.
+     * Possible values are 'auto', 'light' and 'dark'. Default: dark
      */
-    'theme' => 'auto',
+    'theme' => 'dark',
 
     /*
      * By default this package will only run in local development.

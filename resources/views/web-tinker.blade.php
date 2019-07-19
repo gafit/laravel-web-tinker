@@ -16,6 +16,9 @@
 <div id="web-tinker" v-cloak>
     <tinker></tinker>
 </div>
+<div id="loading_gif_container" style="display: none">
+    <img class="loading" src="{{url('/vendor/web-tinker/loading.gif') }}" alt="loading">
+</div>
 
 <script src="{{ asset(mix('app.js', 'vendor/web-tinker')) }}"></script>
 </body>
