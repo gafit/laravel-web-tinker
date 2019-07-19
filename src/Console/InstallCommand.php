@@ -9,7 +9,7 @@ class InstallCommand extends Command
 {
     use DetectsApplicationNamespace;
 
-    protected $signature = 'web-tinker:install';
+    protected $signature = 'web-tinker:install {--force : Overwrite any existing files}';
 
     protected $description = 'Install all of the Web Tinker resources';
 
@@ -22,7 +22,7 @@ class InstallCommand extends Command
     {
         $this->comment('Publishing Web Tinker Assets...');
 
-        $this->callSilent('vendor:publish', ['--tag' => 'web-tinker-assets']);
+        $this->callSilent('vendor:publish', ['--tag' => 'web-tinker-assets', ($this->option('force') ? ' --force' : '')]);
 
         $this->info('Web tinker installed successfully.');
     }
